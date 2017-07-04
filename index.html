@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--FANCY GALLERY BY FRANCESC GIMENEZ. 2017.-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>LINKA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="titol">FANCY GALLERY</h1>
+    </div>
+    <p class="description">
+        Galeria dinámica usando la API de https://unsplash.com, llamada AJAX con Jquery , carga de imágenes al hacer scroll down de 10 en 10. CSS con Bootstrap, preparado para gestionar las imágenes en responsive para diferentes tipos de pantalla con la libreria Masonry para gestionar el posicionamiento de las fotos, Imágenes con lazyload de carga previa con posibilidad de ampliar cada una con una galería de imágenes creada con la librería Fancybox, cambiada la configuración de X-frame para que te permita acceder a la imagen en grande al clickar en la foto con la extension para google Chrome IGNORE X-FRAME (https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe?). Dos tipos diferentes de google fonts combinadas para mejor resultado en la parte superior para titulo (Rubik) y para este texto (Roboto).
+    </p>
+    <div class="container">
+        <div id="unsplash">
+        </div>
+        <div id="more">
+        </div>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src='http://imagesloaded.desandro.com/imagesloaded.pkgd.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js"></script>
+    <script src="assets/api.js"></script>
+    <!--    trucada a la API amb el token personal amb variacions en el HTML-->
+    <script>
+        $('#unsplash').unsplash({
+            client_id: "94d266feb1630cf6bc3d384f36bd930c305273c03111fa4cbc19f3d187471fb4",
+            limit: 10,
+            columns: 3,
+            width: 500
+        });
+
+    </script>
+
+</body>
+
+</html>
