@@ -107,9 +107,9 @@
         $(document).ajaxComplete(function (event, xhr, settings, XMLHttpRequest) {
             setTimeout(function () {
                 if (xhr.status == 200) {
-                    $(".more");
+                    //$(".more");
                 } else {
-                    $(".more");
+                    //$(".more");
                 }
             }, 1500);
         });
